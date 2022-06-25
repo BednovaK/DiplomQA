@@ -1,0 +1,26 @@
+# Use postgres/example user/password credentials
+version: '3.7'
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=passdocker
+      - POSTGRES_DB=app
+    ports:
+      - '5432:5432'
+  node-app:
+    build: ./gate-simulator
+    image: node:latest
+    ports:
+      - '9999:9999'
