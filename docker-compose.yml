@@ -1,7 +1,7 @@
 # Use postgres/example user/password credentials
 version: '3.7'
 services:
-  mysql:
+  mysqldb:
     image: mysql:latest
     ports:
       - '3306:3306'
@@ -11,7 +11,7 @@ services:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=pass
 
-  postgres:
+  postgresdb:
     image: postgres:latest
     environment:
       - POSTGRES_USER=user
