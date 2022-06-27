@@ -1,2 +1,2 @@
 # DiplomQA
- [План тестирования](https://github.com/BednovaK/DiplomQA/blob/33484dad0b6af78c3e33fc5ba31d6beb87bbec7c/Plan.md)
+ [План тестирования](https://github.com/BednovaK/DiplomQA/blob/4cbd8bda45c03b99e6615801ef3a23ee0e3cccd5/Plan.md)
