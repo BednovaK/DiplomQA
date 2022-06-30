@@ -13,12 +13,12 @@
 *   Дождаться пока контейнеры запустятся
 * в терминале IntelliJ IDEA запустить SUT:
     - с использованием БД MySQL
-      командой ```java "-Dspring.datasource.url=jdbc:mysql://localhost:3300/app" -jar artifacts/aqa-shop.jar```
+      командой ```java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar```
     - с использованием БД PostgreSQL
       командой ```java -jar artifacts/aqa-shop.jar "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app"```
 * запустить автотесты командой:
     - для конфигурации БД MySql:  
-      ```./gradlew "-Ddatasource.url=jdbc:mysql://localhost:3300/app" clean test ```
+      ```./gradlew "-Ddatasource.url=jdbc:mysql://localhost:3306/app" clean test ```
     - для конфигурации БД PostgreSQL:  
       ```./gradlew "-Ddatasource.url=jdbc:postgresql://localhost:5432/app" clean test ```
 
