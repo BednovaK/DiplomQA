@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id "io.freefair.lombok" version "5.3.0"
+    id 'io.qameta.allure' version '2.9.6'
 }
 
 group 'ru.netology'
@@ -15,13 +17,27 @@ repositories {
     mavenCentral()
 }
 
+allure {
+    autoconfigure = true
+    version = '2.16.1' // Latest Allure Version
+
+    useJUnit5 {
+        version = '2.16.1' // Latest Allure Version
+    }
+}
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testImplementation 'org.projectlombok:lombok:1.18.22'
     testImplementation 'com.codeborne:selenide:6.3.5'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'org.slf4j:slf4j-simple:1.7.36'
     testImplementation 'mysql:mysql-connector-java:8.0.28'
-    implementation  'org.postgresql:postgresql:42.3.3'
+    testImplementation 'commons-dbutils:commons-dbutils:1.7'
+    testImplementation  'org.postgresql:postgresql:42.3.3'
+    testImplementation 'io.qameta.allure:allure-selenide:2.17.3'
+    testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.36'
 
 }
 
@@ -31,6 +47,6 @@ test {
     systemProperty "db.url", System.getProperty("db.url");
     systemProperty "login", System.getProperty("login", "user");
     systemProperty "password", System.getProperty("password", "pass");
-    systemProperty "sut.url", System.getProperty("sut.url", "http://localhost:8080");
+//    systemProperty "app.url", System.getProperty("app.url", "http://localhost:8080");
 }
 

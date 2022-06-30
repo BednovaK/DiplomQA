@@ -1,4 +1,4 @@
-FROM node:8.16.2-apline
+FROM node
 WORKDIR /opt/app
 COPY .. .
 RUN npm install
