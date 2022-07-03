@@ -66,6 +66,10 @@ public class PositiveTest {
         payByCard.enterPayCardData(validCardInformation);
         payByCard.successfulPayCardPayment();
 
+        var paymentId = SQLunits.getPaymentId();
+        var statusForPayment = SQLunits.getStatusForCredit(paymentId);
+        Assertions.assertEquals("APPROVED", statusForPayment);
+
     }
 
     @DisplayName("By credit with credit card that expires in the current month and year")
@@ -77,6 +81,10 @@ public class PositiveTest {
         tourOfferPage.buyOnCredit();
         payByCreditCard.enterCreditCardData(validCardInformation);
         payByCreditCard.successfulCreditCardPayment();
+
+        var paymentId = SQLunits.getPaymentId();
+        var statusForPayment = SQLunits.getStatusForCredit(paymentId);
+        Assertions.assertEquals("APPROVED", statusForPayment);
 
     }
 
@@ -90,6 +98,10 @@ public class PositiveTest {
         payByCard.enterPayCardData(validCardInformation);
         payByCard.successfulPayCardPayment();
 
+        var paymentId = SQLunits.getPaymentId();
+        var statusForPayment = SQLunits.getStatusForCredit(paymentId);
+        Assertions.assertEquals("APPROVED", statusForPayment);
+
     }
 
     @DisplayName("By Credit with card that expires next month.")
@@ -101,6 +113,10 @@ public class PositiveTest {
         tourOfferPage.buyOnCredit();
         payByCreditCard.enterCreditCardData(validCardInformation);
         payByCreditCard.successfulCreditCardPayment();
+
+        var paymentId = SQLunits.getPaymentId();
+        var statusForPayment = SQLunits.getStatusForCredit(paymentId);
+        Assertions.assertEquals("APPROVED", statusForPayment);
 
     }
 

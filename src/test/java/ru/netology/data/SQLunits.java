@@ -1,11 +1,15 @@
 package ru.netology.data;
 
+import com.mysql.cj.jdbc.Driver;
 import lombok.SneakyThrows;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class SQLunits {
+
+
+
     @SneakyThrows
     public static Connection getConnection() {
         String dbUrl = System.getProperty("db.url");
