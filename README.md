@@ -15,12 +15,12 @@
     - с использованием БД MySQL
       командой ```java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar```
     - с использованием БД PostgreSQL
-      командой ```java -jar artifacts/aqa-shop.jar "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app"```
+      командой ```java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar```
 * запустить автотесты командой:
     - для конфигурации БД MySql:  
-      ```./gradlew "-Ddatasource.url=jdbc:mysql://localhost:3306/app" clean test ```
+      ```./gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app" ```
     - для конфигурации БД PostgreSQL:  
-      ```./gradlew "-Ddatasource.url=jdbc:postgresql://localhost:5432/app" clean test ```
+      ```./gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app" ```
 
 * запустить отчеты командой:
 
