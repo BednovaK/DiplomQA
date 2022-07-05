@@ -67,7 +67,7 @@ public class PositiveTest {
         payByCard.successfulPayCardPayment();
 
         var paymentId = SQLunits.getPaymentId();
-        var statusForPayment = SQLunits.getStatusForCredit(paymentId);
+        var statusForPayment = SQLunits.getStatusForPayment(paymentId);
         Assertions.assertEquals("APPROVED", statusForPayment);
 
     }
@@ -99,7 +99,7 @@ public class PositiveTest {
         payByCard.successfulPayCardPayment();
 
         var paymentId = SQLunits.getPaymentId();
-        var statusForPayment = SQLunits.getStatusForCredit(paymentId);
+        var statusForPayment = SQLunits.getStatusForPayment(paymentId);
         Assertions.assertEquals("APPROVED", statusForPayment);
 
     }
