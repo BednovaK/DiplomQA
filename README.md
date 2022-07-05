@@ -1,6 +1,7 @@
 # DiplomQA
  [План тестирования](https://github.com/BednovaK/DiplomQA/blob/4ab522d10ea94f6c875c4925518a47c318f0e405/Plan.md)
-
+ [Отчет по тестированию] (https://github.com/BednovaK/DiplomQA/blob/c3f5e6a18bc276ce03506d76a40e82e952a018f6/docs/Report.md)
+ [Отчет о выполнении плана тестирования](https://github.com/BednovaK/DiplomQA/blob/c3f5e6a18bc276ce03506d76a40e82e952a018f6/docs/Summary.md)
 
 ### Запуск приложения
 
